@@ -2,19 +2,16 @@
   <div class="header">
     <div class="logo">
       <span>
-        <el-icon style="width: 36px; height: 36px; margin-right: 8px" size="36"
-          ><MostlyCloudy
-        /></el-icon>
-        <p>云端笔记</p>
+        <p>hitwhLinker管理系统</p>
       </span>
     </div>
     <div class="login_status">
-      <el-icon style="width: 36px; height: 36px; margin-right: 8px" size="33">
+      <el-icon style="width: 36px; height: 36px; margin-right: 8px; color:#fff;" size="33">
         <User/>
       </el-icon>
       <el-dropdown>
         <span class="el-dropdown-link">
-          <el-icon style="width: 36px; height: 36px; margin-right: 8px" size="33"><ArrowDown/></el-icon>
+          <el-icon style="width: 36px; height: 36px; margin-right: 8px; color:#fff;" size="33"><ArrowDown/></el-icon>
         </span>
         <template #dropdown>
           <el-dropdown-menu>
@@ -45,12 +42,13 @@ const logOut = () => {
   width: 100%;
   height: 83px;
   border: 1px solid rgb(205, 205, 205);
+    background-color: rgb(48, 65, 86);
 }
 .logo {
   width: 320px;
   height: 100%;
   padding: 20px 40px;
-  background-color: rgb(48, 65, 86);
+
 }
 .logo span {
   display: flex;

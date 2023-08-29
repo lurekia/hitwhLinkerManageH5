@@ -5,7 +5,8 @@ import Home from '../pages/Home.vue'
 import NewRegister from '../pages/NewRegister.vue'
 // import Increase from '../pages/Increase.vue' // 该组件由对话框实现
 import NewLogin from '../pages/NewLogin.vue'
-import test from '../pages/test.vue'
+import activity from '../components/activity.vue'
+import user from '../components/user.vue'
 
 const routes = [
     {
@@ -29,11 +30,21 @@ const routes = [
         path: '/Home',
         name: 'Home',
         component: Home,
-        meta : { isAuth:true,title: '笔记主页' }
-    },
-    {
-        path: '/test',
-        component: test
+        children: [
+            // {
+            //     path: '',
+            //     redirect: 'activity'  
+            // },
+            {
+                path:'activity',
+                component:activity
+            },
+            {
+                path:'user',
+                component:user
+            }
+        ],
+        meta : { isAuth:true,title: '主页' }
     },
 ]
 

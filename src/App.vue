@@ -22,25 +22,25 @@ import { useMainStore } from './store/index.js'
 const router = useRouter()
 const store = useMainStore()
 // 全局前置路由守卫————初始化的时候被调用、每次路由切换之前被调用
-router.beforeEach((to, from, next) => {
-  console.log('navigation-guards');
-    //如果路由需要跳转
-    if (to.meta.isAuth) {
-        //判断 如果school本地存储是qinghuadaxue的时候，可以进去
-        if (store.isLogin||to.name=='NewLogin') {
-            next()  //放行
-        } else {
-            ElMessage({
-              message: '请登陆',
-              type: 'error'
-            })
-            router.push('/NewLogin')
-        }
-    } else {
-        // 否则，放行
-        next()
-    }
-})
+// router.beforeEach((to, from, next) => {
+//   console.log('navigation-guards');
+//     //如果路由需要跳转
+//     if (to.meta.isAuth) {
+//         //判断 如果school本地存储是qinghuadaxue的时候，可以进去
+//         if (store.isLogin||to.name=='NewLogin') {
+//             next()  //放行
+//         } else {
+//             ElMessage({
+//               message: '请登陆',
+//               type: 'error'
+//             })
+//             router.push('/NewLogin')
+//         }
+//     } else {
+//         // 否则，放行
+//         next()
+//     }
+// })
 // 全局路由守卫
 // router.beforeEach((to, from, next) => {
 // console.log('navigation-guards');
